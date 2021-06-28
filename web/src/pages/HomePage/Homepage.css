@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+@import url('https://fonts.googleapis.com/css?family=Cookie|Oswald');
+
+.weather {
+	height: 100vh;
+	width: 103%;
+	display: flex;
+	flex-wrap: wrap;
+	word-break: break-all;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	overflow-y: hidden;
+}
+.weather--clear {
+	color: #F2F6EA;
+	background: #4596AE;
+}
+.weather--rain {
+	color: #DF922A;
+	background: #D6FAFB;
+}
+.weather--snow {
+	color: #452708;
+	background: #4596AE;
+}
+.weather--clouds {
+	color: #305381;
+	background: #F3C93F;
+}
+
+.weather__background-text {
+	margin-right: 1rem;
+	font-family: 'Cookie', cursive;
+	font-size: 3rem;
+	line-height: 10rem;
+	letter-spacing: 0.1rem;
+}
+
+.weather__container {
+	display: flex;
+	height: 40rem;
+	width: 30rem;
+	background-repeat: none;
+	background-size: cover;
+	position: absolute;
+	border-radius: 0.5rem;
+	box-shadow: 2px 3px 50px 13px rgba(219, 227, 243, 0.61);
+}
+.weather__container--clear {
+	background-image: url('./images/clear.png');
+}
+.weather__container--rain {
+	background-image: url('./images/rain.png');
+	box-shadow: 2px 3px 50px 13px rgba(223, 146, 42, 0.61);
+}
+.weather__container--snow {
+	background-image: url('./images/snow.png');
+}
+.weather__container--clouds {
+	background-image: url('./images/clouds.png');
+	box-shadow: 2px 3px 50px 13px rgba(166, 185, 201, 0.61);
+
+}
+
+.weather__information {
+	padding: 2rem;
+	padding-right: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+}
+
+
+.weather__city {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	background: none;
+	border: none;
+	font-family: 'Oswald', sans-serif;
+	cursor: pointer;
+}
+.weather__city--clear,
+.weather__temp--clear {
+	color: #4596AE;
+}
+.weather__description-text--clear{
+	color: #F2F6EA;
+}
+.weather__city--clear::placeholder {
+	color: #4596AE;
+}
+.weather__city--rain,
+.weather__temp--rain,
+.weather__description-text--rain {
+	color: #D056B3;
+}
+.weather__city--rain::placeholder {
+	color: #D056B3;
+}
+.weather__city--snow,
+.weather__temp--snow,
+.weather__description-text--snow {
+	color: #B03A12;
+}
+.weather__city--snow::placeholder {
+	color: #B03A12;
+}
+.weather__city--clouds,
+.weather__temp--clouds,
+.weather__description-text--clouds {
+	color: white;
+	-webkit-text-stroke: 0.1rem #305381;
+
+}
+.weather__city--clouds::placeholder {
+	color: white;
+	-webkit-text-stroke: 0.1rem #305381;
+	font-size: 1.8rem;
+}
+
+.weather__temp {
+	font-size: 5rem;
+}
+
+.weather__description-text {
+	writing-mode: vertical-lr;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	font-size: 1.8rem;
+}
+
+@media (max-width: 800px) {
+	.weather {
+		width: 100%;
+	}
+
+	.weather__background-text {
+		display: none;
+	}
+
+	.weather__container {
+		height: 100vh;
+		width: 100%;
+		border-radius: 0;
+	}
+}
