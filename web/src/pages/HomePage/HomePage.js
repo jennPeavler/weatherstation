@@ -43,8 +43,6 @@ const HomePage = () => {
     quote = 'I have only one heart.  I will not hide it from the world';
   }
 
-  console.log({ weather });
-
   let weatherClass = 'clear';
   if(weather.conditions.some(condition => condition.toLowerCase() === 'rain'  ||  condition.toLowerCase() === 'mist')) {
     weatherClass = 'rain';
