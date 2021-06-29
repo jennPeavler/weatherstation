@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch from 'node-fetch';
 
 export const getWeather = async ({ city }) => {
   const response = await fetch(
@@ -14,7 +14,7 @@ export const getWeather = async ({ city }) => {
 			humidity: 0,
 			descriptions: []
 		}
-	}
+	};
 
   return {
     city,
@@ -22,6 +22,6 @@ export const getWeather = async ({ city }) => {
     temp: Math.round(json.main.temp),
 		humidity: json.main.humidity,
 		descriptions: json.weather.map(w => w.description)
-  }
-}
+  };
+};
 
